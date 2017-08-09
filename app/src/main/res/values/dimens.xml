@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="wellcome_padding_view">5dp</dimen>
+    <dimen name="notifi_permisstion_padding_view">5dp</dimen>
+    <dimen name="notifi_permisstion_magin_left_right">5dp</dimen>
+    <dimen name="wellcome_height_viewpager">325dp</dimen>
+    <dimen name="wellcome_width_layout_buttom">280dp</dimen>
+    <dimen name="wellcome_height_circle_indicator">48dp</dimen>
+    <dimen name="wellcome_height_layout_buttom">100dp</dimen>
+    <dimen name="chieu_rong_buttom_pin">75dp</dimen>
+    <dimen name="margin_btn_pin">5dp</dimen>
+</resources>

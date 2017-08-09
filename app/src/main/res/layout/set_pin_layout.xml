@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_noti_input_pin_lock_ls_ma_pin_to"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Enter Passcode"
+            android:textColor="@color/color_white" />
+
+        <EditText
+            android:id="@+id/set_pin_txt_input_code"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="true"
+            android:gravity="center"
+            android:hint="@string/set_pin_confirm_pin_code"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/color_white"
+            android:password="true"
+            android:textColor="@color/color_white"></EditText>
+    </LinearLayout>
+</RelativeLayout>

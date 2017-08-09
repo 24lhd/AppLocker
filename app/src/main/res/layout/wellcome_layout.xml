@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/wellcome_padding_view">
+
+        <RelativeLayout
+            android:id="@+id/layout_btn"
+            android:layout_width="@dimen/wellcome_width_layout_buttom"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center">
+
+            <Button
+                style="@style/Base.TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wellcome_text_btn_skip"
+                android:id="@+id/wellcome_btn_skip"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                style="@style/Base.TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/wellcome_btn_next"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/wellcome_text_btn_next" />
+        </RelativeLayout>
+
+        <com.lhd.module.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wellcome_height_circle_indicator"
+            android:layout_above="@+id/layout_btn" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/wellcome_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/indicator" />
+    </RelativeLayout>
+</LinearLayout>
