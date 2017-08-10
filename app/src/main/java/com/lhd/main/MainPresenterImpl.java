@@ -23,6 +23,7 @@ public class MainPresenterImpl implements MainPresenter {
 
     @Override
     public void checkStartWellcomeFragment() {
+        mainModel.setStartWellcomeFragment(mainActivity, false);
         boolean isStart = mainModel.isStartWellcomeFragment(mainActivity);
         if (isStart) {
             mainActivity.showBar();

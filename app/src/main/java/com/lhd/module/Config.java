@@ -9,4 +9,5 @@ public class Config {
     public static final String IS_WELLCOME = "IS_WELLCOME";
     public static final String LAYOUT_FRAGMENT = "LAYOUT_FRAGMENT";
     public static final String INDEX_LAYOUT_FRAGMENT = "INDEX_LAYOUT_FRAGMENT";
+    public static final String PIN_CODE = "app";
 }

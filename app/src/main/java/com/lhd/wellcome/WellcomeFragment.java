@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +38,7 @@ public class WellcomeFragment extends Fragment implements WellcomeView {
         mViewPager = (ViewPager) viewWellcome.findViewById(R.id.wellcome_viewpager);
         mainActivity.hideAllPermisstion();
         btnSkip = viewWellcome.findViewById(R.id.wellcome_btn_skip);
-        btnNext = viewWellcome.findViewById(R.id.wellcome_btn_skip);
+        btnNext = viewWellcome.findViewById(R.id.wellcome_btn_next);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +48,7 @@ public class WellcomeFragment extends Fragment implements WellcomeView {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               skipView();
+                skipView();
             }
         });
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -89,13 +90,15 @@ public class WellcomeFragment extends Fragment implements WellcomeView {
     @Override
     public void nextFragment() {
         int index = mViewPager.getCurrentItem();
+        Log.e("nextFragment", "" + index);
         if (index < 2)
-            mViewPager.setCurrentItem(index + 1,true);
-        else if (index==2) skipView();
+            mViewPager.setCurrentItem(index + 1, true);
+        else if (index == 2) skipView();
     }
 
     @Override
     public void skipView() {
+        mainActivity.hideAllPermisstion();
         mainActivity.startSetPinFragment();
     }
 

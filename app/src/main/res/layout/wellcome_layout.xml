@@ -36,6 +36,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/wellcome_btn_magin_buttom"
                 android:text="@string/wellcome_text_btn_next" />
         </RelativeLayout>
 

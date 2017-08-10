@@ -7,6 +7,7 @@ package com.lhd.main;
 public interface MainView {
 
     public void startWellcomeFragment();
+    public void startListAppFragment();
     public void startLogService();
 
     public void showPermisstionDrawOverApp();

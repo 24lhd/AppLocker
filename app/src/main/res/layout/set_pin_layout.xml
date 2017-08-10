@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,27 +9,41 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="@dimen/set_pin_lock_size_ic"
+            android:layout_height="@dimen/set_pin_lock_size_ic"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_lock_outline_white_48dp" />
+
         <TextView
-            android:id="@+id/txt_noti_input_pin_lock_ls_ma_pin_to"
-            style="@style/Base.TextAppearance.AppCompat.Title"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/set_pin_margin_view"
             android:gravity="center"
-            android:text="Enter Passcode"
+            android:text="@string/set_pin_txt_title_set_up_pin_code"
+            android:textColor="@color/color_white" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/set_pin_margin_view"
+            android:gravity="center"
+            android:text="@string/set_pin_txt_body_set_4_pin_code"
             android:textColor="@color/color_white" />
 
         <EditText
             android:id="@+id/set_pin_txt_input_code"
-            style="@style/Base.TextAppearance.AppCompat.Title"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="true"
             android:gravity="center"
             android:hint="@string/set_pin_confirm_pin_code"
             android:inputType="numberPassword"
             android:maxLength="4"
-            android:textColorHint="@color/color_white"
             android:password="true"
-            android:textColor="@color/color_white"></EditText>
+            android:textColor="@color/color_white"
+            android:textColorHint="@color/color_white"></EditText>
     </LinearLayout>
 </RelativeLayout>

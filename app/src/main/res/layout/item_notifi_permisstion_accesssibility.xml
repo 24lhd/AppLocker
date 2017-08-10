@@ -30,7 +30,7 @@
                 style="@style/Base.TextAppearance.AppCompat.Title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/notifi_permisstion_text_title_draw_over_app" />
+                android:text="@string/notifi_permisstion_text_title_accseccibility" />
 
             <TextView
                 style="@style/Base.TextAppearance.AppCompat.Body1"

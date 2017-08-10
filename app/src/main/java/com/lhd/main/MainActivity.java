@@ -1,6 +1,10 @@
 package com.lhd.main;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
@@ -9,10 +13,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import com.lhd.applock.R;
 import com.lhd.setpin.SetPinFragment;
 import com.lhd.toprunapp.StateDeviceService;
 import com.lhd.wellcome.WellcomeFragment;
+
+import java.util.List;
 
 /**
  * Created by D on 8/8/2017.
@@ -28,6 +35,29 @@ public class MainActivity extends AppCompatActivity implements MainView {
         setContentView(R.layout.main_layout);
         mainPresenter = new MainPresenterImpl(this);
         initView();
+        loadAppsIntoList(this);
+    }
+
+    private PackageManager mPm;
+
+    public void loadAppsIntoList(Context mContext) {
+        final Intent i = new Intent(Intent.ACTION_MAIN);
+        i.addCategory(Intent.CATEGORY_LAUNCHER);
+        mPm = mContext.getPackageManager();
+        final List<ResolveInfo> ris = mPm.queryIntentActivities(i, 0);
+        List<ApplicationInfo> list = mPm.getInstalledApplications(0);
+//        for (ApplicationInfo applicationInfo:list) {
+//            Log.e("duongapp", applicationInfo.packageName);
+//            Log.e("duongapp", applicationInfo.loadLabel(mPm).toString());
+//        }
+        for (ResolveInfo ri : ris) {
+            if (!mContext.getPackageName().equals(ri.activityInfo.packageName)) {
+//                final AppListElement ah = new AppListElement(ri.loadLabel(mPm).toString(), ri.activityInfo, AppListElement.PRIORITY_NORMAL_APPS);
+//                Log.e("duongapp", ri.loadLabel(mPm).toString());
+//                Log.e("duongapp", ri.activityInfo.packageName);
+//                Log.e("duongapp", ri.activityInfo.loadIcon(mPm)+"");
+            }
+        }
     }
 
     private LinearLayout itemNotiDrawOverApp;
@@ -44,6 +74,11 @@ public class MainActivity extends AppCompatActivity implements MainView {
     @Override
     public void startWellcomeFragment() {
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame_view, new WellcomeFragment()).commit();
+    }
+
+    @Override
+    public void startListAppFragment() {
+
     }
 
     @Override
@@ -80,11 +115,10 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
 
-
     @Override
     public void requestPermisstionUsagerAccess() {
-            Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
-            startActivity(intent);
+        Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+        startActivity(intent);
     }
 
     @Override

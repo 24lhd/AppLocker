@@ -8,9 +8,13 @@
     <dimen name="notifi_permisstion_padding_view">5dp</dimen>
     <dimen name="notifi_permisstion_magin_left_right">5dp</dimen>
     <dimen name="wellcome_height_viewpager">325dp</dimen>
-    <dimen name="wellcome_width_layout_buttom">280dp</dimen>
+    <dimen name="wellcome_width_layout_buttom">270dp</dimen>
     <dimen name="wellcome_height_circle_indicator">48dp</dimen>
     <dimen name="wellcome_height_layout_buttom">100dp</dimen>
     <dimen name="chieu_rong_buttom_pin">75dp</dimen>
     <dimen name="margin_btn_pin">5dp</dimen>
+    <dimen name="wellcome_btn_magin_buttom">20dp</dimen>
+    <dimen name="set_pin_lock_size_ic">150dp</dimen>
+    <dimen name="set_pin_margin_view">10dp</dimen>
+    <dimen name="item_list_app_txt_title_padding_conent">3dp</dimen>
 </resources>
